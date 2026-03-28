@@ -7,10 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87165EC729E6FCEA00E48DA2 /* UsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87165EC629E6FCEA00E48DA2 /* UsageView.swift */; };
+		87165EC929E6FCF200E48DA2 /* UsageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87165EC829E6FCF200E48DA2 /* UsageViewModel.swift */; };
+		87165ECD29E804F400E48DA2 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87165ECC29E804F400E48DA2 /* MetalView.swift */; };
 		873C402528E84A2500962482 /* VinylView.docc in Sources */ = {isa = PBXBuildFile; fileRef = 873C402428E84A2500962482 /* VinylView.docc */; };
 		873C402B28E84A2500962482 /* VinylView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873C402028E84A2500962482 /* VinylView.framework */; };
 		873C403028E84A2500962482 /* VinylViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C402F28E84A2500962482 /* VinylViewTests.swift */; };
 		873C403128E84A2500962482 /* VinylView.h in Headers */ = {isa = PBXBuildFile; fileRef = 873C402328E84A2500962482 /* VinylView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		873C403B28E84A9D00962482 /* VinylView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C403A28E84A9D00962482 /* VinylView.swift */; };
+		873C403D28E86DA300962482 /* MTLFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C403C28E86DA300962482 /* MTLFilter.swift */; };
+		873C403F28E8700400962482 /* vinyl.metal in Sources */ = {isa = PBXBuildFile; fileRef = 873C403E28E8700400962482 /* vinyl.metal */; };
+		875386192A2D225600C64FE6 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875386182A2D225600C64FE6 /* MetalKit.framework */; };
+		877087C128F40C120062FBD9 /* RoundedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877087C028F40C120062FBD9 /* RoundedRect.swift */; };
+		877B3EF929F5372D00635A41 /* CPUUsageTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B3EF829F5372D00635A41 /* CPUUsageTracker.m */; };
+		877B3EFC29F5383A00635A41 /* MemoryUsageTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B3EFB29F5383A00635A41 /* MemoryUsageTracker.m */; };
+		877B3EFF29F8066D00635A41 /* VinylLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877B3EFE29F8066D00635A41 /* VinylLabelView.swift */; };
+		87CF9F6B29E3F51600DCD642 /* RotatingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F6A29E3F51600DCD642 /* RotatingViewModifier.swift */; };
+		87CF9F6D29E53F9D00DCD642 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F6C29E53F9D00DCD642 /* AnimatedImage.swift */; };
+		87CF9F6F29E5487D00DCD642 /* NSUIClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F6E29E5487D00DCD642 /* NSUIClasses.swift */; };
+		87CF9F7129E67DA700DCD642 /* ImageTextureArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F7029E67DA700DCD642 /* ImageTextureArray.swift */; };
+		87CF9F7529E67F0000DCD642 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F7429E67F0000DCD642 /* AnimatedImageView.swift */; };
+		87CF9F7729E67F6C00DCD642 /* AnimatedMetalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F7629E67F6C00DCD642 /* AnimatedMetalImage.swift */; };
+		87CF9FAE29E68BB300DCD642 /* VinylViewDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9FAD29E68BB300DCD642 /* VinylViewDemoApp.swift */; };
+		87CF9FB029E68BB300DCD642 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9FAF29E68BB300DCD642 /* ContentView.swift */; };
+		87CF9FB229E68BB400DCD642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87CF9FB129E68BB400DCD642 /* Assets.xcassets */; };
+		87CF9FB629E68BB400DCD642 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87CF9FB529E68BB400DCD642 /* Preview Assets.xcassets */; };
+		87CF9FBB29E68D1600DCD642 /* VinylView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873C402028E84A2500962482 /* VinylView.framework */; };
+		87CF9FC029E6B62100DCD642 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F7229E67EB000DCD642 /* shader.metal */; };
+		87E8B04028F5915300F4C0B6 /* RoundedRectanlgeTickMarkDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8B03F28F5915300F4C0B6 /* RoundedRectanlgeTickMarkDemo.swift */; };
+		87F17EF528E986A300396B5B /* VinylGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F17EF428E986A300396B5B /* VinylGenerator.swift */; };
+		87F17EF728E9D1FD00396B5B /* Image+MTLTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F17EF628E9D1FD00396B5B /* Image+MTLTexture.swift */; };
+		87F17EF928E9E34900396B5B /* Image+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F17EF828E9E34900396B5B /* Image+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +51,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87165EC629E6FCEA00E48DA2 /* UsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageView.swift; sourceTree = "<group>"; };
+		87165EC829E6FCF200E48DA2 /* UsageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageViewModel.swift; sourceTree = "<group>"; };
+		87165ECC29E804F400E48DA2 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		873C402028E84A2500962482 /* VinylView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinylView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873C402328E84A2500962482 /* VinylView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VinylView.h; sourceTree = "<group>"; };
 		873C402428E84A2500962482 /* VinylView.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = VinylView.docc; sourceTree = "<group>"; };
 		873C402A28E84A2500962482 /* VinylViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinylViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		873C402F28E84A2500962482 /* VinylViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinylViewTests.swift; sourceTree = "<group>"; };
+		873C403A28E84A9D00962482 /* VinylView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinylView.swift; sourceTree = "<group>"; };
+		873C403C28E86DA300962482 /* MTLFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLFilter.swift; sourceTree = "<group>"; };
+		873C403E28E8700400962482 /* vinyl.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vinyl.metal; sourceTree = "<group>"; };
+		875386182A2D225600C64FE6 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
+		877087C028F40C120062FBD9 /* RoundedRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRect.swift; sourceTree = "<group>"; };
+		877B3EF629F5372D00635A41 /* VinylViewDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VinylViewDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		877B3EF729F5372D00635A41 /* CPUUsageTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPUUsageTracker.h; sourceTree = "<group>"; };
+		877B3EF829F5372D00635A41 /* CPUUsageTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPUUsageTracker.m; sourceTree = "<group>"; };
+		877B3EFA29F5383A00635A41 /* MemoryUsageTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryUsageTracker.h; sourceTree = "<group>"; };
+		877B3EFB29F5383A00635A41 /* MemoryUsageTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryUsageTracker.m; sourceTree = "<group>"; };
+		877B3EFE29F8066D00635A41 /* VinylLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinylLabelView.swift; sourceTree = "<group>"; };
+		87CF9F6A29E3F51600DCD642 /* RotatingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingViewModifier.swift; sourceTree = "<group>"; };
+		87CF9F6C29E53F9D00DCD642 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImage.swift; sourceTree = "<group>"; };
+		87CF9F6E29E5487D00DCD642 /* NSUIClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUIClasses.swift; sourceTree = "<group>"; };
+		87CF9F7029E67DA700DCD642 /* ImageTextureArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextureArray.swift; sourceTree = "<group>"; };
+		87CF9F7229E67EB000DCD642 /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
+		87CF9F7429E67F0000DCD642 /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
+		87CF9F7629E67F6C00DCD642 /* AnimatedMetalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedMetalImage.swift; sourceTree = "<group>"; };
+		87CF9FAB29E68BB300DCD642 /* VinylViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinylViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87CF9FAD29E68BB300DCD642 /* VinylViewDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinylViewDemoApp.swift; sourceTree = "<group>"; };
+		87CF9FAF29E68BB300DCD642 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		87CF9FB129E68BB400DCD642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87CF9FB329E68BB400DCD642 /* VinylViewDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VinylViewDemo.entitlements; sourceTree = "<group>"; };
+		87CF9FB529E68BB400DCD642 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87E8B03F28F5915300F4C0B6 /* RoundedRectanlgeTickMarkDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectanlgeTickMarkDemo.swift; sourceTree = "<group>"; };
+		87F17EF428E986A300396B5B /* VinylGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinylGenerator.swift; sourceTree = "<group>"; };
+		87F17EF628E9D1FD00396B5B /* Image+MTLTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+MTLTexture.swift"; sourceTree = "<group>"; };
+		87F17EF828E9E34900396B5B /* Image+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875386192A2D225600C64FE6 /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +106,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		87CF9FA829E68BB300DCD642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87CF9FBB29E68D1600DCD642 /* VinylView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,7 +122,9 @@
 			children = (
 				873C402228E84A2500962482 /* VinylView */,
 				873C402E28E84A2500962482 /* VinylViewTests */,
+				87CF9FAC29E68BB300DCD642 /* VinylViewDemo */,
 				873C402128E84A2500962482 /* Products */,
+				87CF9FBA29E68D1600DCD642 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +133,7 @@
 			children = (
 				873C402028E84A2500962482 /* VinylView.framework */,
 				873C402A28E84A2500962482 /* VinylViewTests.xctest */,
+				87CF9FAB29E68BB300DCD642 /* VinylViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +143,22 @@
 			children = (
 				873C402328E84A2500962482 /* VinylView.h */,
 				873C402428E84A2500962482 /* VinylView.docc */,
+				873C403A28E84A9D00962482 /* VinylView.swift */,
+				877B3EFE29F8066D00635A41 /* VinylLabelView.swift */,
+				87F17EF428E986A300396B5B /* VinylGenerator.swift */,
+				87CF9F7029E67DA700DCD642 /* ImageTextureArray.swift */,
+				87CF9F6C29E53F9D00DCD642 /* AnimatedImage.swift */,
+				87CF9F7629E67F6C00DCD642 /* AnimatedMetalImage.swift */,
+				87CF9F7429E67F0000DCD642 /* AnimatedImageView.swift */,
+				87165ECC29E804F400E48DA2 /* MetalView.swift */,
+				87CF9F6A29E3F51600DCD642 /* RotatingViewModifier.swift */,
+				877087C028F40C120062FBD9 /* RoundedRect.swift */,
+				87E8B03F28F5915300F4C0B6 /* RoundedRectanlgeTickMarkDemo.swift */,
+				87CF9F6E29E5487D00DCD642 /* NSUIClasses.swift */,
+				87F17EF628E9D1FD00396B5B /* Image+MTLTexture.swift */,
+				87F17EF828E9E34900396B5B /* Image+Color.swift */,
+				873C403C28E86DA300962482 /* MTLFilter.swift */,
+				877B3EF529F443A400635A41 /* Shaders */,
 			);
 			path = VinylView;
 			sourceTree = "<group>";
@@ -83,6 +169,58 @@
 				873C402F28E84A2500962482 /* VinylViewTests.swift */,
 			);
 			path = VinylViewTests;
+			sourceTree = "<group>";
+		};
+		877B3EF529F443A400635A41 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				87CF9F7229E67EB000DCD642 /* shader.metal */,
+				873C403E28E8700400962482 /* vinyl.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		877B3EFD29F5385400635A41 /* Performance Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				877B3EF729F5372D00635A41 /* CPUUsageTracker.h */,
+				877B3EF829F5372D00635A41 /* CPUUsageTracker.m */,
+				877B3EFA29F5383A00635A41 /* MemoryUsageTracker.h */,
+				877B3EFB29F5383A00635A41 /* MemoryUsageTracker.m */,
+			);
+			path = "Performance Tracking";
+			sourceTree = "<group>";
+		};
+		87CF9FAC29E68BB300DCD642 /* VinylViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				87CF9FAF29E68BB300DCD642 /* ContentView.swift */,
+				87165EC629E6FCEA00E48DA2 /* UsageView.swift */,
+				87165EC829E6FCF200E48DA2 /* UsageViewModel.swift */,
+				87CF9FAD29E68BB300DCD642 /* VinylViewDemoApp.swift */,
+				877B3EFD29F5385400635A41 /* Performance Tracking */,
+				87CF9FB129E68BB400DCD642 /* Assets.xcassets */,
+				87CF9FB329E68BB400DCD642 /* VinylViewDemo.entitlements */,
+				87CF9FB429E68BB400DCD642 /* Preview Content */,
+				877B3EF629F5372D00635A41 /* VinylViewDemo-Bridging-Header.h */,
+			);
+			path = VinylViewDemo;
+			sourceTree = "<group>";
+		};
+		87CF9FB429E68BB400DCD642 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				87CF9FB529E68BB400DCD642 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		87CF9FBA29E68D1600DCD642 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				875386182A2D225600C64FE6 /* MetalKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +273,23 @@
 			productReference = 873C402A28E84A2500962482 /* VinylViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		87CF9FAA29E68BB300DCD642 /* VinylViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87CF9FB729E68BB400DCD642 /* Build configuration list for PBXNativeTarget "VinylViewDemo" */;
+			buildPhases = (
+				87CF9FA729E68BB300DCD642 /* Sources */,
+				87CF9FA829E68BB300DCD642 /* Frameworks */,
+				87CF9FA929E68BB300DCD642 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VinylViewDemo;
+			productName = VinylViewDemo;
+			productReference = 87CF9FAB29E68BB300DCD642 /* VinylViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -142,14 +297,18 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					873C401F28E84A2500962482 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					873C402928E84A2500962482 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					87CF9FAA29E68BB300DCD642 = {
+						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -168,6 +327,7 @@
 			targets = (
 				873C401F28E84A2500962482 /* VinylView */,
 				873C402928E84A2500962482 /* VinylViewTests */,
+				87CF9FAA29E68BB300DCD642 /* VinylViewDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +347,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		87CF9FA929E68BB300DCD642 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87CF9FB629E68BB400DCD642 /* Preview Assets.xcassets in Resources */,
+				87CF9FB229E68BB400DCD642 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,7 +363,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F17EF528E986A300396B5B /* VinylGenerator.swift in Sources */,
+				877087C128F40C120062FBD9 /* RoundedRect.swift in Sources */,
+				87CF9F7529E67F0000DCD642 /* AnimatedImageView.swift in Sources */,
 				873C402528E84A2500962482 /* VinylView.docc in Sources */,
+				87E8B04028F5915300F4C0B6 /* RoundedRectanlgeTickMarkDemo.swift in Sources */,
+				873C403B28E84A9D00962482 /* VinylView.swift in Sources */,
+				87CF9F6B29E3F51600DCD642 /* RotatingViewModifier.swift in Sources */,
+				873C403D28E86DA300962482 /* MTLFilter.swift in Sources */,
+				87CF9F7129E67DA700DCD642 /* ImageTextureArray.swift in Sources */,
+				87CF9F6D29E53F9D00DCD642 /* AnimatedImage.swift in Sources */,
+				87CF9F6F29E5487D00DCD642 /* NSUIClasses.swift in Sources */,
+				87CF9F7729E67F6C00DCD642 /* AnimatedMetalImage.swift in Sources */,
+				87F17EF928E9E34900396B5B /* Image+Color.swift in Sources */,
+				87CF9FC029E6B62100DCD642 /* shader.metal in Sources */,
+				877B3EFF29F8066D00635A41 /* VinylLabelView.swift in Sources */,
+				873C403F28E8700400962482 /* vinyl.metal in Sources */,
+				87165ECD29E804F400E48DA2 /* MetalView.swift in Sources */,
+				87F17EF728E9D1FD00396B5B /* Image+MTLTexture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +389,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				873C403028E84A2500962482 /* VinylViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87CF9FA729E68BB300DCD642 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87165EC929E6FCF200E48DA2 /* UsageViewModel.swift in Sources */,
+				877B3EFC29F5383A00635A41 /* MemoryUsageTracker.m in Sources */,
+				87CF9FB029E68BB300DCD642 /* ContentView.swift in Sources */,
+				87165EC729E6FCEA00E48DA2 /* UsageView.swift in Sources */,
+				87CF9FAE29E68BB300DCD642 /* VinylViewDemoApp.swift in Sources */,
+				877B3EF929F5372D00635A41 /* CPUUsageTracker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +450,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -268,6 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -312,17 +513,20 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = z;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -335,13 +539,19 @@
 		873C403528E84A2500962482 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PEZAT5DWHN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -356,6 +566,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = de.eniestudio.VinylView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
@@ -370,13 +582,19 @@
 		873C403628E84A2500962482 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PEZAT5DWHN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -391,6 +609,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = de.eniestudio.VinylView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
@@ -405,8 +625,10 @@
 		873C403828E84A2500962482 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PEZAT5DWHN;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -425,8 +647,10 @@
 		873C403928E84A2500962482 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PEZAT5DWHN;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -437,6 +661,89 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87CF9FB829E68BB400DCD642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = VinylViewDemo/VinylViewDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"VinylViewDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = PEZAT5DWHN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.eniestudio.VinylViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "VinylViewDemo/VinylViewDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87CF9FB929E68BB400DCD642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = VinylViewDemo/VinylViewDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"VinylViewDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = PEZAT5DWHN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.eniestudio.VinylViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "VinylViewDemo/VinylViewDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +775,15 @@
 			buildConfigurations = (
 				873C403828E84A2500962482 /* Debug */,
 				873C403928E84A2500962482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87CF9FB729E68BB400DCD642 /* Build configuration list for PBXNativeTarget "VinylViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87CF9FB829E68BB400DCD642 /* Debug */,
+				87CF9FB929E68BB400DCD642 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

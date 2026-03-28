@@ -14,5 +14,3 @@ FOUNDATION_EXPORT double VinylViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char VinylViewVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <VinylView/PublicHeader.h>
-
-
