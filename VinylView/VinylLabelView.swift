@@ -18,13 +18,11 @@ struct VinylLabelView<Content>: View where Content : View {
     var diameter: CGFloat
     var tracksCount: Int = 5
     var isPlaying: Bool = false
+    var onStopped: (() -> Void)? = nil
     var content: (() -> Content)
     
-    let timer = Timer.publish(every: 1/FPS, on: .main, in: .common).autoconnect()
-    @State private var rotation = 0.0
-    
     var body: some View {
-        Group {
+        ZStack {
 #if os(iOS) || os(watchOS) || os(tvOS)
             Image(uiImage: label ?? UIImage.imageWith(color: labelColor ?? .green))
                 .resizable()
@@ -39,7 +37,7 @@ struct VinylLabelView<Content>: View where Content : View {
             content()
                 .frame(width: diameter/3, height: diameter/3)
         }
-        .rotationEffect(Angle(degrees: rotation ))
+        .rotatingCA(isPlaying, duration: 360.0 / 270.0, onStopped: onStopped)
         .overlay(
             ZStack {
                 // highlight
@@ -63,11 +61,6 @@ struct VinylLabelView<Content>: View where Content : View {
                     .shadow(color: .black.opacity(0.33), radius: 0.25, y: -1)
             }
         )
-        .onReceive(timer) { _ in
-            if isPlaying {
-                self.rotation += 270/FPS // 270 degrees per second
-            }
-        }
     }
 }
 

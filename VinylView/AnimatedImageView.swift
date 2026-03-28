@@ -117,7 +117,7 @@ extension AnimatedImageView: MTKViewDelegate {
             renderEncoder.setRenderPipelineState(pipelineState)
             renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
             var frame = index/3
-            renderEncoder.setFragmentBuffer(device!.makeBuffer(bytes: &frame, length: MemoryLayout<Int>.size, options: []), offset: 0, index: 0)
+            renderEncoder.setFragmentBytes(&frame, length: MemoryLayout<Int>.size, index: 0)
             renderEncoder.setFragmentTexture(textureArray.textureArray, index: 0)
             renderEncoder.drawIndexedPrimitives(type: .triangle, indexCount: indexBuffer.length / MemoryLayout<UInt16>.size, indexType: .uint16, indexBuffer: indexBuffer, indexBufferOffset: 0)
             

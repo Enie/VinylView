@@ -27,6 +27,7 @@ public struct VinylView<Content>: View where Content : View {
     @State private var frames = [NSImage]()
 #endif
     @State private var animationFrames: [CGImage] = []
+    @State private var textureIsAnimating: Bool = false
     public var diameter: CGFloat
     public var tracksCount: Int = 5
     @State public var isPlaying: Bool = false
@@ -61,15 +62,15 @@ public struct VinylView<Content>: View where Content : View {
         ZStack {
             if mode == .gif,
                let image = animatedImage {
-                AnimatedImage(animationImage: image, isAnimating: isPlaying)
+                AnimatedImage(animationImage: image, isAnimating: textureIsAnimating)
                     .rotationEffect(Angle(degrees: Double(90)))
             } else if mode == .gpu,
                animationFrames.count > 0 &&
                 animationFrames.first!.width & animationFrames.first!.height != 0 {
-                AnimatedMetalImage(images: animationFrames, isPlaying: isPlaying)
+                AnimatedMetalImage(images: animationFrames, isPlaying: textureIsAnimating)
                     .frame(minWidth: diameter, minHeight: diameter)
             } else if mode == .memoryless {
-                MetalView(renderer: vinylGenerator, isPlaying: isPlaying)
+                MetalView(renderer: vinylGenerator, isPlaying: textureIsAnimating)
                     .frame(minWidth: diameter, minHeight: diameter)
             }
             Circle()
@@ -97,12 +98,19 @@ public struct VinylView<Content>: View where Content : View {
     public var body: some View {
         ZStack(alignment: .center) {
             recordView
-            VinylLabelView(label: label, labelColor: labelColor, diameter: diameter, tracksCount: tracksCount, isPlaying: isPlaying) {
+            VinylLabelView(label: label, labelColor: labelColor, diameter: diameter, tracksCount: tracksCount, isPlaying: isPlaying, onStopped: {
+                textureIsAnimating = false
+            }) {
                 content()
             }
         }
         .frame(width: diameter, height: diameter)
         .cornerRadius(diameter)
+        .onChange(of: isPlaying) { playing in
+            if playing { textureIsAnimating = true }
+            // When stopping, textureIsAnimating is set to false by onStopped
+            // once the CA ramp-down animation finishes — not immediately here.
+        }
         .onAppear {
             autoreleasepool {
                 animatedImage = nil

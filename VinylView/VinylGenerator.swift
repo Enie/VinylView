@@ -16,10 +16,30 @@ public final class VinylGenerator: NSObject, MTKViewDelegate, ObservableObject {
     private let inFlightSemaphore = DispatchSemaphore(value: maxBuffersInFlight)
     
     let commandQueue: MTLCommandQueue
-    
+
+    private var generateNoisePipelineState: MTLComputePipelineState?
+    private var fitPipelineState: MTLComputePipelineState?
+    private var noiseTexture: MTLTexture?
+    private var noiseTextureSize: Int = 0
+
     override init() {
         self.device = MTLCreateSystemDefaultDevice()!
         self.commandQueue = device.makeCommandQueue()!
+        super.init()
+        if let library = try? device.makeDefaultLibrary(bundle: Bundle(for: VinylGenerator.self)),
+           let noiseFunc = library.makeFunction(name: "generateNoise"),
+           let fitFunc = library.makeFunction(name: "fit") {
+            generateNoisePipelineState = try? device.makeComputePipelineState(function: noiseFunc)
+            fitPipelineState = try? device.makeComputePipelineState(function: fitFunc)
+        }
+    }
+
+    private func makeNoiseTexture(size: Int) -> MTLTexture? {
+        let desc = MTLTextureDescriptor.texture2DDescriptor(
+            pixelFormat: .bgra8Unorm, width: size, height: size, mipmapped: false)
+        desc.usage = [.shaderRead, .shaderWrite]
+        desc.storageMode = .private
+        return device.makeTexture(descriptor: desc)
     }
     
     public func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
@@ -27,44 +47,57 @@ public final class VinylGenerator: NSObject, MTKViewDelegate, ObservableObject {
     public func draw(in view: MTKView) {
         autoreleasepool {
             _ = inFlightSemaphore.wait(timeout: DispatchTime.distantFuture)
-            
-            guard let buffer = commandQueue.makeCommandBuffer() else { return }
-            
-            let semaphore = inFlightSemaphore
-            buffer.addCompletedHandler { (_ commandBuffer)-> Swift.Void in
-                semaphore.signal()
-            }
-            
-            guard let drawable = view.currentDrawable else { return }
-            
-            let height = drawable.texture.height
-            let width = drawable.texture.width
-            let scalingFactor = view.window!.backingScaleFactor
-            let noiseWidth = Int(diameter ?? CGFloat(width) / scalingFactor)
-            
-            guard let noiseTexture = VinylGenerator.textureWithNoise(diameter: noiseWidth, seed: frameIndex),
-                  let library = try? device.makeDefaultLibrary(bundle: Bundle(for: VinylGenerator.self)),
-                  let blurFunction = library.makeFunction(name: "fit"),
-                  let blurState = try? device.makeComputePipelineState(function: blurFunction),
-                  let computeEncoder = buffer.makeComputeCommandEncoder()
-            else {
+
+            guard let buffer = commandQueue.makeCommandBuffer() else {
+                inFlightSemaphore.signal()
                 return
             }
-            
-            let threadGroupWidth = 32
-            let threadGroupHeight = 32
-            
-            let threadsPerGroup = MTLSizeMake(threadGroupWidth, threadGroupHeight, 1)
-            let numThreadgroups = MTLSizeMake(width/threadsPerGroup.width + 1, height/threadsPerGroup.height + 1, 1)
-            
-            computeEncoder.setComputePipelineState(blurState)
-            computeEncoder.setTexture(noiseTexture, index: 0)
-            computeEncoder.setTexture(drawable.texture, index: 1)
-            computeEncoder.dispatchThreadgroups(numThreadgroups, threadsPerThreadgroup: threadsPerGroup)
-            computeEncoder.endEncoding()
+            let semaphore = inFlightSemaphore
+            buffer.addCompletedHandler { _ in semaphore.signal() }
+
+            guard let drawable = view.currentDrawable else { return }
+
+            let noiseWidth = Int(diameter ?? CGFloat(drawable.texture.width))
+
+            if noiseTexture == nil || noiseTextureSize != noiseWidth {
+                noiseTexture = makeNoiseTexture(size: noiseWidth)
+                noiseTextureSize = noiseWidth
+            }
+
+            guard let noiseTexture,
+                  let generateNoisePipelineState,
+                  let fitPipelineState else { return }
+
+            // Pass 1: generate noise → intermediate texture
+            if let enc = buffer.makeComputeCommandEncoder() {
+                var timeOffset = Float(frameIndex)
+                let (tw, th) = (32, 32)
+                enc.setComputePipelineState(generateNoisePipelineState)
+                enc.setTexture(noiseTexture, index: 0)
+                enc.setBytes(&timeOffset, length: MemoryLayout<Float>.size, index: 0)
+                enc.dispatchThreadgroups(
+                    MTLSizeMake((noiseWidth + tw - 1) / tw, (noiseWidth + th - 1) / th, 1),
+                    threadsPerThreadgroup: MTLSizeMake(tw, th, 1))
+                enc.endEncoding()
+            }
+
+            // Pass 2: fit intermediate texture → drawable
+            if let enc = buffer.makeComputeCommandEncoder() {
+                let outW = drawable.texture.width
+                let outH = drawable.texture.height
+                let (tw, th) = (32, 32)
+                enc.setComputePipelineState(fitPipelineState)
+                enc.setTexture(noiseTexture, index: 0)
+                enc.setTexture(drawable.texture, index: 1)
+                enc.dispatchThreadgroups(
+                    MTLSizeMake((outW + tw - 1) / tw, (outH + th - 1) / th, 1),
+                    threadsPerThreadgroup: MTLSizeMake(tw, th, 1))
+                enc.endEncoding()
+            }
+
             buffer.present(drawable)
             buffer.commit()
-            
+
             if !isPaused {
                 frameIndex += 1
             } else {

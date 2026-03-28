@@ -129,10 +129,7 @@ kernel void generateNoise(
     
     float t_xy = t(center, id);
     float f = 20;
-    float offset = 0;
-    for (int i = 0; i < radius; i++) {
-        offset += 2*M_2_PI_F*i;
-    }
+    float offset = M_2_PI_F * float(radius) * (float(radius) - 1.0);
     
     // draw spiral
     float value = sin((radius + t_xy*M_PI_F*2) * 2);

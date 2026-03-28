@@ -22,6 +22,7 @@
 		877B3EF929F5372D00635A41 /* CPUUsageTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B3EF829F5372D00635A41 /* CPUUsageTracker.m */; };
 		877B3EFC29F5383A00635A41 /* MemoryUsageTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 877B3EFB29F5383A00635A41 /* MemoryUsageTracker.m */; };
 		877B3EFF29F8066D00635A41 /* VinylLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877B3EFE29F8066D00635A41 /* VinylLabelView.swift */; };
+		87CF9FD029E9000000DCD642 /* RotatingCAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9FCF29E9000000DCD642 /* RotatingCAView.swift */; };
 		87CF9F6B29E3F51600DCD642 /* RotatingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F6A29E3F51600DCD642 /* RotatingViewModifier.swift */; };
 		87CF9F6D29E53F9D00DCD642 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F6C29E53F9D00DCD642 /* AnimatedImage.swift */; };
 		87CF9F6F29E5487D00DCD642 /* NSUIClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF9F6E29E5487D00DCD642 /* NSUIClasses.swift */; };
@@ -70,6 +71,7 @@
 		877B3EFA29F5383A00635A41 /* MemoryUsageTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryUsageTracker.h; sourceTree = "<group>"; };
 		877B3EFB29F5383A00635A41 /* MemoryUsageTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryUsageTracker.m; sourceTree = "<group>"; };
 		877B3EFE29F8066D00635A41 /* VinylLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinylLabelView.swift; sourceTree = "<group>"; };
+		87CF9FCF29E9000000DCD642 /* RotatingCAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingCAView.swift; sourceTree = "<group>"; };
 		87CF9F6A29E3F51600DCD642 /* RotatingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingViewModifier.swift; sourceTree = "<group>"; };
 		87CF9F6C29E53F9D00DCD642 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImage.swift; sourceTree = "<group>"; };
 		87CF9F6E29E5487D00DCD642 /* NSUIClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUIClasses.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				87CF9F7429E67F0000DCD642 /* AnimatedImageView.swift */,
 				87165ECC29E804F400E48DA2 /* MetalView.swift */,
 				87CF9F6A29E3F51600DCD642 /* RotatingViewModifier.swift */,
+				87CF9FCF29E9000000DCD642 /* RotatingCAView.swift */,
 				877087C028F40C120062FBD9 /* RoundedRect.swift */,
 				87E8B03F28F5915300F4C0B6 /* RoundedRectanlgeTickMarkDemo.swift */,
 				87CF9F6E29E5487D00DCD642 /* NSUIClasses.swift */,
@@ -370,6 +373,7 @@
 				87E8B04028F5915300F4C0B6 /* RoundedRectanlgeTickMarkDemo.swift in Sources */,
 				873C403B28E84A9D00962482 /* VinylView.swift in Sources */,
 				87CF9F6B29E3F51600DCD642 /* RotatingViewModifier.swift in Sources */,
+				87CF9FD029E9000000DCD642 /* RotatingCAView.swift in Sources */,
 				873C403D28E86DA300962482 /* MTLFilter.swift in Sources */,
 				87CF9F7129E67DA700DCD642 /* ImageTextureArray.swift in Sources */,
 				87CF9F6D29E53F9D00DCD642 /* AnimatedImage.swift in Sources */,
