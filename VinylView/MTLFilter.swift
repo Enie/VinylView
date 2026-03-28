@@ -52,7 +52,7 @@ class MTLFilter {
         let width = texture.width
         
         guard let device = MTLCreateSystemDefaultDevice(),
-              let library = try? device.makeDefaultLibrary(bundle: Bundle(for: self)),
+              let library = try? device.makeDefaultLibrary(bundle: Bundle.vinylView),
               let function = library.makeFunction(name: "radialBlur"),
               let state = try? device.makeComputePipelineState(function: function),
               let commandQueue = device.makeCommandQueue(),

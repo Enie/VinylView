@@ -36,7 +36,7 @@ public final class AnimatedImageView: MTKView {
     }
 
     func setUpMetal() {
-        let frameworkBundle = Bundle(for: type(of: self))
+        let frameworkBundle = Bundle.vinylView
         
         let vertexDescriptor = MTLVertexDescriptor()
         vertexDescriptor.attributes[0].format = .float2

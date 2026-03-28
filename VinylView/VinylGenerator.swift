@@ -26,7 +26,7 @@ public final class VinylGenerator: NSObject, MTKViewDelegate, ObservableObject {
         self.device = MTLCreateSystemDefaultDevice()!
         self.commandQueue = device.makeCommandQueue()!
         super.init()
-        if let library = try? device.makeDefaultLibrary(bundle: Bundle(for: VinylGenerator.self)),
+        if let library = try? device.makeDefaultLibrary(bundle: Bundle.vinylView),
            let noiseFunc = library.makeFunction(name: "generateNoise"),
            let fitFunc = library.makeFunction(name: "fit") {
             generateNoisePipelineState = try? device.makeComputePipelineState(function: noiseFunc)
@@ -113,7 +113,7 @@ public final class VinylGenerator: NSObject, MTKViewDelegate, ObservableObject {
         descriptor.usage = MTLTextureUsage([.shaderRead, .shaderWrite, .renderTarget, .pixelFormatView])
         
         guard let device = MTLCreateSystemDefaultDevice(),
-              let library = try? device.makeDefaultLibrary(bundle: Bundle(for: self)),
+              let library = try? device.makeDefaultLibrary(bundle: Bundle.vinylView),
               let function = library.makeFunction(name: "generateNoise"),
               let state = try? device.makeComputePipelineState(function: function),
               let texture = device.makeTexture(descriptor: descriptor),
@@ -155,7 +155,7 @@ public final class VinylGenerator: NSObject, MTKViewDelegate, ObservableObject {
             descriptor.usage = MTLTextureUsage([.shaderRead, .shaderWrite, .renderTarget, .pixelFormatView])
             
             guard let device = MTLCreateSystemDefaultDevice(),
-                  let library = try? device.makeDefaultLibrary(bundle: Bundle(for: self)),
+                  let library = try? device.makeDefaultLibrary(bundle: Bundle.vinylView),
                   let function = library.makeFunction(name: "generateNoiseLine"),
                   let state = try? device.makeComputePipelineState(function: function),
                   let texture = device.makeTexture(descriptor: descriptor),
